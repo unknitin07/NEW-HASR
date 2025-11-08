@@ -220,6 +220,45 @@
             text-decoration: underline;
         }
 
+        ads-btn {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #d62828, #b71c1c);
+  padding: 6px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(183, 28, 28, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Mild glow */
+.ads-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(214, 40, 40, 0.45);
+}
+
+/* Shine animation */
+.ads-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  transform: skewX(-25deg);
+  animation: shine 2.5s infinite;
+}
+
+@keyframes shine {
+  0% { left: -75%; }
+  60% { left: 125%; }
+  100% { left: 125%; }
+
         .join-button {
             background: #0a84ff;
             color: white;
@@ -305,7 +344,7 @@ src="https://www.facebook.com/tr?id=1339951697922772&ev=PageView&noscript=1"
             </div>
             <div class="header-title">Telegram</div>
         </div>
-        <a href="https://t.me/+h65jLBBUN1wwNGI9" class="header-button">JOIN</a>
+        <a href="https://t.me/nitin4god" target="_blank" class="ads-btn">Ads Setup</a>
     </div>
 
     <div class="main-content">
